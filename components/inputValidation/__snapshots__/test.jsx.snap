@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputValidation should render 1`] = `
+<div
+  class="class "
+>
+  Child
+  <div
+    class="ERROR"
+  />
+</div>
+`;

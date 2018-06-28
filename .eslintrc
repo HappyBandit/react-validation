@@ -1,0 +1,209 @@
+{
+  "env": {
+    "es6": true,
+    "jest/globals": true,
+    "node": true
+  },
+  "plugins": [
+    "jest",
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "generators": false,
+      "jsx": true,
+      "objectLiteralDuplicateProperties": false,
+      "experimentalObjectRestSpread": true
+    },
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "globals": {
+    "console": false,
+    "document": false,
+    "window": true,
+    "fetch": true
+  },
+  "rules": {
+    // General
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "arrow-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "brace-style": [
+      "error",
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "camelcase": [
+      "error",
+      {
+        "properties": "never"
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "comma-style": [
+      "error",
+      "last"
+    ],
+    "consistent-this": [
+      "error",
+      "self"
+    ],
+    "curly": [
+      "error",
+      "all"
+    ],
+    "dot-notation": "error",
+    "eqeqeq": "off",
+    "guard-for-in": "off",
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "beforeColon": false,
+        "afterColon": true
+      }
+    ],
+    "keyword-spacing": "error",
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "max-depth": [
+      "error",
+      4
+    ],
+    "new-cap": "off",
+    "no-dupe-class-members": "error",
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "no-new": "error",
+    "no-mixed-spaces-and-tabs": "error",
+    "no-multi-spaces": "error",
+    "no-multi-str": "error",
+    "no-multiple-empty-lines": "error",
+    "no-sequences": "error",
+    "no-spaced-func": "error",
+    "no-trailing-spaces": "error",
+    "no-undef": "error",
+    "no-unused-expressions": "error",
+    "no-unused-vars": "warn",
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false
+      }
+    ],
+    "no-var": "error",
+    "no-with": "error",
+    "one-var": [
+      "error",
+      "never"
+    ],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any"
+      }
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "space-before-blocks": [
+      "error",
+      "always"
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "ignore",
+        "named": "never"
+      }
+    ],
+    "space-in-parens": [
+      "error",
+      "never"
+    ],
+    "space-infix-ops": "error",
+    "space-unary-ops": [
+      "error",
+      {
+        "words": false,
+        "nonwords": false
+      }
+    ],
+    "strict": "off",
+    "wrap-iife": "error",
+    "yoda": [
+      "error",
+      "never"
+    ],
+    "generator-star-spacing": [
+      "error",
+      "before"
+    ],
+    // React
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "react/jsx-indent": [
+      "error",
+      4
+    ],
+    "react/jsx-pascal-case": [
+      "error",
+      {
+        "allowAllCaps": true
+      }
+    ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "return": true
+      }
+    ],
+    "react/no-unknown-property": "error",
+    "react/prefer-es6-class": [
+      "error",
+      "always"
+    ]
+  }
+}
