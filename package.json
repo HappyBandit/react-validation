@@ -1,22 +1,20 @@
 {
   "name": "@happybandit/react-validation",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/HappyBandit/react-validation"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "build": "npm run build:clean && npm run build:babel && npm run build:tsc && npm run copy",
     "build:clean": "rimraf ./dist",
     "build:tsc": "tsc -p \"./tsconfig-build.json\"",
-    "build:babel": "babel components --out-dir dist/components --extensions \".ts,.tsx\" --ignore \"**/*.stories.ts,**/*.stories.tsx,**/tests/*\"",
+    "build:babel": "babel components --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/*.stories.ts,**/*.stories.tsx,**/tests/*\"",
     "copy": "copyfiles \"./components/**/*\" ./dist -e \"./components/**/*.snap\" -e \"./components/**/*.ts\" -e \"./components/**/*.tsx\" -e \"./components/**/*.js\" -e \"./components/**/*.jsx\"",
     "lint": "npm run lint:eslint && npm run lint:css",
     "lint:css": "stylelint \"./components/**/*.css\" \"./components/**/*.scss\"",
     "lint:eslint": "eslint --ext .js,.jsx,.ts,.tsx ./",
+    "prepublishOnly": "npm test && npm run build",
     "pretest": "npm run test:clean && npm run lint && npm run test:tsc",
     "start": "start-storybook -p 6006",
     "test:clean": "rimraf ./coverage",
