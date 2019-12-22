@@ -1,6 +1,6 @@
 {
   "name": "@happybandit/react-validation",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/HappyBandit/react-validation"
@@ -30,6 +30,7 @@
   "files": [
     "dist/"
   ],
+  "main": "dist/index.js",
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "bootstrap": "4.3.1"
