@@ -1,9 +1,12 @@
 {
-  "name": "@happy-bandit/react-validation",
+  "name": "@HappyBandit/react-validation",
   "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/HappyBandit/react-validation"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "build": "npm run build:clean && npm run build:babel && npm run build:tsc && npm run copy",
