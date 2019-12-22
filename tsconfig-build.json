@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "target": "es6",
+    "outDir": "dist",
+    "declaration": true,
+    "module": "es6",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es5",
+      "es6",
+      "es7",
+      "es2017"
+    ],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "./typings",
+      "node_modules/@types"
+    ]
+  },
+  "include": [
+    "components",
+    "constants"
+  ],
+  "exclude": [
+    "**/*.stories.*",
+    "**/tests/"
+  ]
+}

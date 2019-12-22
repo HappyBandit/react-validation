@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Validation /> should render 1`] = `
+<form>
+  <div
+    class="row"
+  >
+    <div
+      class="col-4 mb-3"
+    >
+      <label
+        for="email"
+      >
+        Email
+      </label>
+      <input
+        class="form-control "
+        id="email"
+        placeholder="Email"
+        type="text"
+      />
+      <div
+        class="invalid-feedback"
+      />
+    </div>
+  </div>
+  <button
+    class="btn btn-primary"
+  >
+    Submit
+  </button>
+</form>
+`;

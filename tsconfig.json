@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "target": "es6",
+    "allowJs": true,
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "lib": ["dom","es5","es6","es7","es2017"],
+    "esModuleInterop": true,
+    "typeRoots": ["./typings", "node_modules/@types"],
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*"
+      ]
+    }
+  },
+  "exclude": [
+    "dist",
+    "build",
+    "coverage",
+    "node_modules"
+  ]
+}
