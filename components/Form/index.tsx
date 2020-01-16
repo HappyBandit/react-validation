@@ -5,8 +5,12 @@ import { IFormProps, IInputObject } from '../interfaces';
 const Form: React.FunctionComponent<IFormProps> = ( { onSubmit, ...formProps } ): React.ReactElement => {
     const { current: inputs } = useRef<{ [key: string]: IInputObject }>( {} );
 
-    const addInput = ( uuid, newInput: IInputObject ): void => {
+    const addInput = ( uuid, newInput: IInputObject ): () => void => {
         inputs[uuid] = newInput;
+
+        return () => {
+            delete inputs[uuid];
+        };
     };
     const handleSubmit = ( event: React.FormEvent ) => {
         event.preventDefault();
