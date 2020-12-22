@@ -36,7 +36,7 @@
     "bootstrap": "4.3.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
+    "@babel/cli": "7.12.10",
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
@@ -74,7 +74,7 @@
     "jest": "^24.5.0",
     "jquery": "3.5.0",
     "popper.js": "1.16.0",
-    "prop-types": "15.6.1",
+    "prop-types": "15.7.2",
     "react": "^16.8.4",
     "react-docgen-typescript-loader": "3.6.0",
     "react-dom": "^16.8.4",
