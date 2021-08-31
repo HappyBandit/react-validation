@@ -1,7 +1,5 @@
 name: Build and Deploy
-on:
-  push:
-    paths: [".storybook/**", "components/**"] # Trigger the action only when files change in the folders defined here
+on: push
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
