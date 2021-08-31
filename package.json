@@ -20,7 +20,8 @@
     "test:clean": "rimraf ./coverage",
     "test": "jest",
     "test:tsc": "tsc",
-    "test:watch": "npm run test -- --watchAll"
+    "test:watch": "npm run test -- --watchAll",
+    "build-storybook": "build-storybook"
   },
   "contributors": [
     {

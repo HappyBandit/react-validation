@@ -9,6 +9,7 @@ typings/*
 !/typings/fixed/
 !/typings/untyped/
 stats.json
+/storybook-static/
 
 # Cruft
 .DS_Store
