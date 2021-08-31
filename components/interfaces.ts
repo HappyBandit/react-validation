@@ -3,6 +3,9 @@ import { FormHTMLAttributes } from 'react';
 import { Omit } from 'yargs';
 
 export interface IFormProps extends Partial<Omit<FormHTMLAttributes<HTMLFormElement>, 'onSubmit'>> {
+    /**
+     * triggered on submit with `valid` determined by the validation of the input,
+     */
     onSubmit: (valid: boolean) => void;
 }
 

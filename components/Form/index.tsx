@@ -2,6 +2,9 @@ import React, { useRef } from 'react';
 import FormContext from '../formContext';
 import { IFormProps, IInputObject } from '../interfaces';
 
+/**
+ * Wrapper required to catch and validate submit events.
+ */
 const Form: React.FunctionComponent<IFormProps> = ( { onSubmit, ...formProps } ): React.ReactElement => {
     const { current: inputs } = useRef<{ [key: string]: IInputObject }>( {} );
 

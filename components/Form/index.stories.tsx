@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
-import { storiesOf } from '@storybook/react';
-import Form from './Form';
-import { useInputValidation } from './hooks';
-import { email, phone, required } from './Validators';
+import { Meta } from '@storybook/react';
+import { useInputValidation } from '../hooks';
+import { email, phone, required } from '../Validators';
+import FormComponent from './index';
 
 const Text = ({ value, onChange }: { value: string; onChange: (value: string) => void }) => {
     const result = useInputValidation([ required(value, 'ENTER SOMETHING') ]);
 
     return (
         <div className="col-4 mb-3">
-            <label htmlFor="validationCustomUsername">Username</label>
+            <label htmlFor="validationCustomUsername">Username*</label>
             <div className="input-group">
                 <div className="input-group-prepend">
                     <span className="input-group-text" id="inputGroupPrepend">@</span>
@@ -36,7 +36,7 @@ const Phone = ({ value, onChange }: { value: string; onChange: (value: string) =
 
     return (
         <div className="col-4 mb-3">
-            <label htmlFor="phone">Username</label>
+            <label htmlFor="phone">Phone Number</label>
             <input
                 type="text"
                 className={`form-control ${result.valid ? '' : 'is-invalid'}`}
@@ -59,7 +59,7 @@ const Email = ({ value, onChange }: { value: string; onChange: (value: string) =
 
     return (
         <div className="col-4 mb-3">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email*</label>
             <input
                 type="text"
                 className={`form-control ${result.valid ? '' : 'is-invalid'}`}
@@ -80,7 +80,7 @@ const ValidationStory = () => {
     const [ email, setEmail ] = useState(undefined);
 
     return (
-        <Form
+        <FormComponent
             onSubmit={action('submit')}
         >
             <div className="row">
@@ -89,15 +89,17 @@ const ValidationStory = () => {
                 <Email value={email} onChange={(value) => setEmail(value)}/>
             </div>
             <button className="btn btn-primary">Submit</button>
-        </Form>
+        </FormComponent>
     );
 };
 
-storiesOf('Components', module)
-    .add('Validation', (): React.ReactElement => {
-        return <ValidationStory/>;
-    }, {
-        info: `
-A Hooks based validation system
-  `,
-    });
+// eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
+export default {
+    title: 'Components/Form',
+    component: FormComponent,
+} as Meta;
+
+export const Form = () => <ValidationStory/>;
+Form.parameters = {
+    controls: { hideNoControlsWarning: true },
+};
