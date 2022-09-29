@@ -93,7 +93,6 @@ const ValidationStory = () => {
     );
 };
 
-// eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
 export default {
     title: 'Components/Form',
     component: FormComponent,

@@ -1,21 +1,21 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 import FormContext from '../formContext';
 import { IFormProps, IInputObject } from '../interfaces';
 
 /**
  * Wrapper required to catch and validate submit events.
  */
-const Form: React.FunctionComponent<IFormProps> = ( { onSubmit, ...formProps } ): React.ReactElement => {
+const Form: React.FC<IFormProps> = ( { onSubmit, ...formProps } ): React.ReactElement => {
     const { current: inputs } = useRef<{ [key: string]: IInputObject }>( {} );
 
-    const addInput = ( uuid, newInput: IInputObject ): () => void => {
+    const addInput = useCallback(( uuid, newInput: IInputObject ): () => void => {
         inputs[uuid] = newInput;
 
         return () => {
             delete inputs[uuid];
         };
-    };
-    const handleSubmit = ( event: React.FormEvent ) => {
+    }, []);
+    const handleSubmit = useCallback(( event: React.FormEvent ) => {
         event.preventDefault();
 
         let valid = true;
@@ -27,7 +27,7 @@ const Form: React.FunctionComponent<IFormProps> = ( { onSubmit, ...formProps } )
         } );
 
         onSubmit( valid );
-    };
+    }, []);
 
     const context = {
         register: addInput,

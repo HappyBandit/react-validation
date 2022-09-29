@@ -1,6 +1,5 @@
 import React from 'react';
 import { FormHTMLAttributes } from 'react';
-import { Omit } from 'yargs';
 
 export interface IFormProps extends Partial<Omit<FormHTMLAttributes<HTMLFormElement>, 'onSubmit'>> {
     /**

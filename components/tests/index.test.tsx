@@ -1,4 +1,3 @@
-import expect from 'expect';
 import {render, cleanup, fireEvent } from '@testing-library/react';
 import React, { useState } from 'react';
 import { Form, useInputValidation, Validators } from '../index';
