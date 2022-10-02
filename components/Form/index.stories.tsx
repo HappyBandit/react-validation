@@ -79,9 +79,12 @@ const ValidationStory = () => {
     const [ phone, setPhone ] = useState(undefined);
     const [ email, setEmail ] = useState(undefined);
 
+    const handleSubmit = (...args) => {
+        action('submit')(...args, text, phone, email);
+    };
     return (
         <FormComponent
-            onSubmit={action('submit')}
+            onSubmit={handleSubmit}
         >
             <div className="row">
                 <Text value={text} onChange={(value) => setText(value)}/>

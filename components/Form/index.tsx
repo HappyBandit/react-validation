@@ -27,7 +27,7 @@ const Form: React.FC<IFormProps> = ( { onSubmit, ...formProps } ): React.ReactEl
         } );
 
         onSubmit( valid );
-    }, []);
+    }, [onSubmit]);
 
     const context = {
         register: addInput,
